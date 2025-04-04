@@ -7,8 +7,8 @@ jobs:
     steps:
       - checkout # checkout source code
       - python/install-packages:
-          args: pytest
           pkg-manager: pip
+          pip-dependency-file: requirements.txt
       - run:
           name: Run tests
           command: python -m pytest
